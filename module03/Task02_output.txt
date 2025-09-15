@@ -1,2 +1,7 @@
 (12,132,2)
 (71,None,10)
+
+PS C:\DTU_prog\Assignments_46W38> python -u "c:\DTU_prog\Assignments_46W38\module03\Task02_output.py"
+13 26 2
+PS C:\DTU_prog\Assignments_46W38> python -u "c:\DTU_prog\Assignments_46W38\module03\Task02_output.py"
+30 30 0
