@@ -43,12 +43,13 @@ def QuickSort_byBFC_asc(s):
     left=[]
     right=[]
     pivot = float(s[0])
+    pivot_o = s[0]
     for i in range(1,n):
         if float(s[i]) < float(pivot):
             left.append(s[i])
         else:
             right.append(s[i])
-    return QuickSort_byBFC_asc(left) + [pivot] + QuickSort_byBFC_asc(right)
+    return QuickSort_byBFC_asc(left) + [pivot_o] + QuickSort_byBFC_asc(right)
 def QuickSort_byBFC_dsc(s):
     n = len(s)
     if n<=1:
@@ -56,12 +57,13 @@ def QuickSort_byBFC_dsc(s):
     left=[]
     right=[]
     pivot = float(s[0])
+    pivot_o = s[0]
     for i in range(1,n):
         if float(s[i]) > float(pivot):
             left.append(s[i])
         else:
             right.append(s[i])
-    return QuickSort_byBFC_dsc(left) + [pivot] + QuickSort_byBFC_dsc(right)
+    return QuickSort_byBFC_dsc(left) + [pivot_o] + QuickSort_byBFC_dsc(right)
 #while sorted list <> nan
 list_sorted = []
 while len(list_sorted) == 0:
