@@ -4,7 +4,7 @@ import yaml
 from pathlib import Path
 from turbine_classes import WindTurbine, GeneralWindTurbine
 
-# Make sure running under same folder each time by calling the path where main.py it is 
+# Make sure running under same folder each time by calling the path where main.py it is
 main_dir = Path(__file__).resolve().parent
 
 # Assign files path
@@ -13,7 +13,9 @@ LEANWIND_wt_operation_curve_path = main_dir / "data" / "LEANWIND_Reference_8MW_1
 
 # Read wt params
 LEANWIND_wt_params = yaml.safe_load(LEANWIND_wt_params_path.read_text())
-LEANWIND_wt_operation_curve = np.loadtxt(LEANWIND_wt_operation_curve_path, delimiter=',', skiprows=1)
+LEANWIND_wt_operation_curve = np.loadtxt(
+    LEANWIND_wt_operation_curve_path, delimiter=",", skiprows=1
+)
 
 # Build WindTurbine object
 # LEANWIND params as General Turbine with cubic power curve
@@ -24,7 +26,7 @@ LEANWIND_wt_gen = GeneralWindTurbine(
     v_in=LEANWIND_wt_params["cut_in_wind_speed"],
     v_rated=LEANWIND_wt_params["rated_wind_speed"],
     v_out=LEANWIND_wt_params["cut_out_wind_speed"],
-    name=LEANWIND_wt_params["name"]
+    name=LEANWIND_wt_params["name"],
 )
 # LEANWIND params with experimental power curve
 LEANWIND_wt_pc = WindTurbine(
@@ -35,7 +37,7 @@ LEANWIND_wt_pc = WindTurbine(
     v_rated=LEANWIND_wt_params["rated_wind_speed"],
     v_out=LEANWIND_wt_params["cut_out_wind_speed"],
     power_curve_data=LEANWIND_wt_operation_curve,
-    name=LEANWIND_wt_params["name"]
+    name=LEANWIND_wt_params["name"],
 )
 
 # Create ws array for ploting
