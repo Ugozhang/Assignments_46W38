@@ -1,3 +1,9 @@
 [submodule "Project01_46W38"]
 	path = Project01_46W38
 	url = https://github.com/Ugozhang/Project01_46W38.git
+[submodule "Project03_46W38_MLforecasting"]
+	path = Project03_46W38_MLforecasting
+	url = https://github.com/Ugozhang/Project03_46W38_MLforecasting
+[submodule "Assignments_46W38_Module12_2025"]
+	path = Assignments_46W38_Module12_2025
+	url = https://github.com/Ugozhang/Assignments_46W38_Module12_2025
